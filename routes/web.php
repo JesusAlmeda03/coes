@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Admin\PostController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,9 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/inicio', function () {
-    return view('welcome');
-});
+Route::get('/', [PostController::class, 'index']);
 
 
 Route::get('/custom', function(){
@@ -28,3 +27,5 @@ Route::get('/custom', function(){
     return view('custom', $data);
 });
 
+
+Route::resource('post', PostController::class);
