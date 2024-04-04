@@ -18,8 +18,8 @@
         <label for='slug'>Slug</label>
         <input type="text" name="slug" id="slug">
 
-        <label for='content'>Contenido</label>
-        <input type="text" name="content" id="content">
+        <label for='conent'>Contenido</label>
+        <input type="text" name="conent" id="conent">
         
         <label for='category'>Categoria</label>
         <select name="category_id" id="category">

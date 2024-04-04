@@ -6,6 +6,8 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
 use App\Models\User;
+use App\Models\Admin\Post;
+
 use App\Models\Admin\Categories;
 
 
@@ -35,8 +37,8 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        //
-        echo $request->input('title');
+        //dd($request->all());
+        Post::create($request->all());
     }
 
     /**
